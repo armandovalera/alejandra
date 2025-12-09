@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Información de motos Yamaha: modelos, tecnología, historia y rendimiento.">
+  <meta name="keywords" content="Yamaha, motocicletas Yamaha, motos deportivas, motos naked, motos touring">
+  <meta name="author" content="Alejandra Diaz">
+
+  <title>Yamaha - Motocicletas y Tecnología</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #e9f3ff;
+      color: #222;
+    }
+
+
+    .nav {
+      background: #0033a0;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav__logo {
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .nav__list {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav__link {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .nav__link:hover {
+      opacity: 0.7;
+    }
+
+   
+    .hero {
+      background: url("https://tse2.mm.bing.net/th/id/OIP.BA_R1zSDdW3190DZovwegwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3") center/cover no-repeat;
+      height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 20px;
+    }
+
+    .hero__title {
+      font-size: 3rem;
+      color: white;
+      text-shadow: 2px 2px 10px black;
+    }
+
+    .hero__description {
+      font-size: 1.2rem;
+      color: #f0f0f0;
+      max-width: 700px;
+      margin: 15px auto;
+      text-shadow: 2px 2px 10px black;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background: #0033a0;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #001f5c;
+    }
+
+   
+    .info {
+      text-align: center;
+      padding: 50px 20px;
+      background: white;
+    }
+
+    .info__title {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #0033a0;
+    }
+
+    .info__text {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+
+    .footer {
+      background: #0033a0;
+      text-align: center;
+      padding: 15px;
+      color: white;
+      margin-top: 50px;
+    }
+
+  
+    .snow-container {
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      font-size: 1rem;
+      opacity: 0.9;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to { transform: translateY(100vh); }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header class="main-header" style="position: relative;">
+    <nav class="nav">
+      <a href="#" class="nav__logo">YAMAHA MOTOS</a>
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">Inicio</a></li>
+        <li><a href="https://www.yamaha-motor.com.mx" class="nav__link" target="_blank">Yamaha Oficial</a></li>
+      </ul>
+    </nav>
+
+    <div class="snow-container"></div>
+  </header>
+
+
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">MOTOS YAMAHA</h1>
+      <p class="hero__description">
+        Yamaha es una de las marcas más influyentes del mundo del motociclismo,
+        reconocida por sus motocicletas deportivas, touring, naked y de aventura.
+        Su tecnología combina potencia, diseño aerodinámico y precisión japonesa.
+      </p>
+      <a href="https://www.yamaha-motor.com.mx" class="btn" target="_blank">Ver Modelos Yamaha</a>
+    </div>
+
+    <div class="snow-container"></div>
+  </section>
+
+  <section class="info">
+    <h2 class="info__title">Tecnología Yamaha</h2>
+    <p class="info__text">
+      Yamaha desarrolla tecnología en diversas áreas, desde su distintivo Blue Core para motores más eficientes y potentes, hasta sistemas avanzados como la transmisión Y-AMT en motocicletas, 
+      que ofrece cambios automáticos o manuales asistidos por botones.
+      <br><br>
+      También destaca su enfoque en seguridad y estabilidad, con sistemas ABS de última generación
+      y chasises ligeros diseñados para maximizar el rendimiento. Yamaha continúa siendo líder en
+      innovación y en experiencia de manejo para pilotos de todos los niveles.
+    </p>
+  </section>
+
+
+  <section class="modelos" style="background:#f0f6ff; padding:60px 20px; text-align:center;">
+    <h2 style="font-size:2.3rem; color:#0033a0; margin-bottom:40px;">Modelos Destacados Yamaha</h2>
+
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:30px;
+      max-width:1200px;
+      margin:auto;
+    ">
+
+      <div style="background:white; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+        <img src="r3.png" 
+             alt="MT-09" style="width:100%; border-radius:10px;">
+        <h3 style="color:#0033a0;">Yamaha MT-09</h3>
+        <p>Motor CP3 de 890cc, diseño agresivo y manejo ágil. Una de las naked más populares del mundo.</p>
+      </div>
+
+      <div style="background:white; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+        <img src="https://yamaha.motor.eu/es/es/_jcr_content/root/responsivegrid/container_1598613442/responsivegrid_1500258827/image_551885916.coreimg.jpeg/1668516160026/yzf-r1-2023.jpeg" 
+             alt="R1" style="width:100%; border-radius:10px;">
+        <h3 style="color:#0033a0;">Yamaha YZF-R1</h3>
+        <p>Superdeportiva con ADN MotoGP. Motor de alto rendimiento y electrónica avanzada.</p>
+      </div>
+
+      <div style="background:white; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+        <img src="https://content2.smcars.cz/img/9766371-yamaha-xmax-300-tech-max-2023-anh-den-386.jpg" 
+             alt="XMAX 300" style="width:100%; border-radius:10px;">
+        <h3 style="color:#0033a0;">Yamaha XMAX 300</h3>
+        <p>Scooter premium con excelente confort, eficiencia y capacidad urbana.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <p class="footer__text">© 2025 Yamaha  – Página UACM creada como proyecto final.</p>
+  </footer>
+
+
+  <script>
+    function crearNieve() {
+      const contenedores = document.querySelectorAll(".snow-container");
+
+      contenedores.forEach(container => {
+        for (let i = 0; i < 25; i++) {
+          const snow = document.createElement("div");
+          snow.classList.add("snowflake");
+
+          /* ← CAMBIO: BANDERAS POR ESTRELLAS ✨ */
+          snow.textContent = "⭐";
+
+          snow.style.left = Math.random() * 100 + "vw";
+          snow.style.fontSize = (Math.random() * 12 + 15) + "px";
+          snow.style.animationDuration = (Math.random() * 4 + 3) + "s";
+          snow.style.opacity = Math.random();
+          
+          container.appendChild(snow);
+
+          setTimeout(() => snow.remove(), 8000);
+        }
+      });
+    }
+
+    setInterval(crearNieve, 1000);
+    crearNieve();
+  </script>
+
+</body>
+</html>

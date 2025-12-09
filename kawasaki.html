@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Información de motos Kawasaki: modelos, tecnología, historia y rendimiento.">
+  <meta name="keywords" content="Kawasaki, motocicletas Kawasaki, motos deportivas, motos naked, motos touring">
+  <meta name="author" content="Alejandra Diaz">
+
+  <title>Kawasaki - Motocicletas y Tecnología</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #e9f3ff;
+      color: #222;
+    }
+
+    .nav {
+      background: #006400;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav__logo {
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .nav__list {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav__link {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .nav__link:hover {
+      opacity: 0.7;
+    }
+
+    .hero {
+      background: url("https://tse4.mm.bing.net/th/id/OIP.K6Xj-z6haY1r05M6atBUXAHaFJ?w=800&h=556&rs=1&pid=ImgDetMain&o=7&rm=3") center/cover no-repeat;
+      height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 20px;
+    }
+
+    .hero__title {
+      font-size: 3rem;
+      color: white;
+      text-shadow: 2px 2px 10px black;
+    }
+
+    .hero__description {
+      font-size: 1.2rem;
+      color: #f0f0f0;
+      max-width: 700px;
+      margin: 15px auto;
+      text-shadow: 2px 2px 10px black;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background: #006400;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #003f00;
+    }
+
+    .info {
+      text-align: center;
+      padding: 50px 20px;
+      background: white;
+    }
+
+    .info__title {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #006400;
+    }
+
+    .info__text {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .footer {
+      background: #006400;
+      text-align: center;
+      padding: 15px;
+      color: white;
+      margin-top: 50px;
+    }
+
+    .snow-container {
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .confeti {
+      position: absolute;
+      top: -10px;
+      width: 10px;
+      height: 14px;
+      opacity: 0.9;
+      animation: caer linear infinite;
+      transform: rotate(15deg);
+      border-radius: 2px;
+    }
+
+    @keyframes caer {
+      to { transform: translateY(100vh) rotate(360deg); }
+    }
+
+    .presentacion {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      z-index: 9999;
+      animation: fadeOut 2.5s ease forwards;
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      70% { opacity: 1; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="presentacion">
+    ✨ BIENVENIDO A KAWASAKI MOTOS ✨
+  </div>
+
+  <header class="main-header" style="position: relative;">
+    <nav class="nav">
+      <a href="#" class="nav__logo">KAWASAKI MOTOS</a>
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">Inicio</a></li>
+        <li><a href="https://www.kawasaki-la.com/" class="nav__link" target="_blank">Kawasaki Oficial</a></li>
+      </ul>
+    </nav>
+
+    <div class="snow-container"></div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">MOTOS KAWASAKI</h1>
+      <p class="hero__description">
+        Kawasaki es una marca líder mundial conocida por su potencia, innovación, tecnología 
+        y rendimiento sobresaliente en motos deportivas, naked, touring y de aventura.
+      </p>
+      <a href="https://www.kawasaki-la.com/" class="btn" target="_blank">Ver Modelos Kawasaki</a>
+    </div>
+
+    <div class="snow-container"></div>
+  </section>
+
+  <section class="info">
+    <h2 class="info__title">Tecnología Kawasaki</h2>
+    <p class="info__text">
+      Kawasaki desarrolla tecnología avanzada como el sistema KTRC, control de tracción, 
+      monitores IMU, frenado ABS inteligente, supercargadores en las líneas H2 y 
+      chasises ligeros de alto rendimiento.
+    </p>
+  </section>
+
+  <section class="modelos" style="background:#f0f6ff; padding:60px 20px; text-align:center;">
+    <h2 style="font-size:2.3rem; color:#006400; margin-bottom:40px;">Modelos Destacados Kawasaki</h2>
+
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:30px;
+      max-width:1200px;
+      margin:auto;
+    ">
+
+      <div style="background:white; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+        <img src="https://www.kawasaki.eu/content/dam/kawasaki/gb/en/products/Ninja%20ZX-10R/2024/2024-ZX1002JRFNN1-Black-Green.png" 
+             alt="ZX-10R" style="width:100%; border-radius:10px;">
+        <h3 style="color:#006400;">Kawasaki Ninja ZX-10R</h3>
+        <p>Superdeportiva inspirada en WorldSBK, potencia y precisión extrema.</p>
+      </div>
+
+      <div style="background:white; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+        <img src="https://content2.smcars.cz/img/152501-kawasaki-z900-2020-anh.docx.jpg" 
+             alt="Z900" style="width:100%; border-radius:10px;">
+        <h3 style="color:#006400;">Kawasaki Z900</h3>
+        <p>Naked icónica con diseño agresivo y excelente relación peso/potencia.</p>
+      </div>
+
+      <div style="background:white; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+        <img src="https://www.kawasaki.eu/content/dam/kawasaki/gb/en/products/Versys%20650/2023/2023-KLE650GPFNN1-Green.png" 
+             alt="Versys 650" style="width:100%; border-radius:10px;">
+        <h3 style="color:#006400;">Kawasaki Versys 650</h3>
+        <p>La touring ideal para viajes largos y confort total.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer__text">© 2025 Kawasaki – Página creada como proyecto UACM</p>
+  </footer>
+
+  <script>
+    function crearConfeti() {
+      const contenedores = document.querySelectorAll(".snow-container");
+
+      const colores = [
+        "#00ff00", "#00cc00", "#009900",
+        "#66ff66", "#33cc33", "#99ff99", "#00ff55"
+      ];
+
+      contenedores.forEach(container => {
+        for (let i = 0; i < 30; i++) {
+          const conf = document.createElement("div");
+          conf.classList.add("confeti");
+
+          conf.style.background = colores[Math.floor(Math.random() * colores.length)];
+
+          conf.style.left = Math.random() * 100 + "vw";
+          conf.style.width = (Math.random() * 10 + 6) + "px";
+          conf.style.height = (Math.random() * 10 + 6) + "px";
+          conf.style.animationDuration = (Math.random() * 3 + 3) + "s";
+          conf.style.opacity = Math.random();
+
+          container.appendChild(conf);
+
+          setTimeout(() => conf.remove(), 7000);
+        }
+      });
+    }
+
+    setInterval(crearConfeti, 900);
+    crearConfeti();
+  </script>
+
+</body>
+</html>

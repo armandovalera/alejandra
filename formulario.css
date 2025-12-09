@@ -1,0 +1,213 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(180deg, #cc187b, #1c72e2);
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #333;
+}
+.contenedor {
+    background:rgb(235, 192, 4);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 640px;
+    box-shadow: 0 6px 20px rgba(6, 228, 62, 0.527);
+    overflow: hidden;
+}
+
+.encabezado {
+    background-color: #1d3b78;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.encabezado h1 {
+    margin: 5px 0;
+    font-size: 1.4rem;
+}
+
+.encabezado p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.contenido-formulario {
+
+    padding: 25px 35px;
+     transition: transform 0.3s;
+}
+
+.seccion {
+    margin-bottom: 35px;
+}
+
+.titulo-seccion {
+    font-size: 1.2rem;
+    color: rgb(255, 208, 205);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #8082da;
+    padding-bottom: 6px;
+     background: linear-gradient(270deg, #3a19b3);
+    background-size: 800% 800%; 
+  
+    -webkit-text-fill-color:blanchedalmond;
+    animation: degradado 2s ease infinite;
+}
+
+.icono-seccion {
+    font-size: 1.3rem;
+}
+
+.campo-formulario {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-formulario label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid hsl(22, 94%, 44%);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #82c40a;
+    outline: none;
+    box-shadow: 0 0 5px rgba(29, 59, 120, 0.4);
+}
+
+.requerido {
+    color: rgb(167, 10, 214);
+    margin-left: 3px;
+}
+.contenedor-cursos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+     display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.curso-opcion {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.curso-opcion:hover {
+    background-color: #eef3ff;
+    border-color: #1d3b78;
+    transform: translateY(-2px);
+    
+}
+
+.curso-tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+
+}
+
+.curso-icono {
+    font-size: 1.4rem;
+}
+
+input[type="checkbox"] {
+    accent-color: #1d3b78;
+    width: 18px;
+    height: 18px;
+}
+
+
+textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+
+.boton-enviar {
+    background-color: #ff5f1f;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+.boton-enviar:hover {
+    background-color: #e95412;
+    box-shadow: 0 4px 12px rgba(255, 95, 31, 0.4);
+    transform: translateY(-1px);
+}
+
+
+@media (max-width: 480px) {
+    .contenedor {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .encabezado h1 {
+        font-size: 1.1rem;
+    }
+
+    .titulo-seccion {
+        font-size: 1.05rem;
+    }
+}
+.curso-opcion {
+    opacity: 100;                 /* Empieza invisible */
+    transform: translateY(30px); /* Deslizar desde abajo */
+    animation: aparecerCurso 0.8s alternate-reverse;
+}
+
+@keyframes rotar{
+  from { transform: rotate(0deg); }
+  to { transform: rotate(200deg); }
+}
+
+.curso-icono  {
+  display: inline-block;
+  margin-right: 10px;
+  animation: rotar 3s linear infinite; /* 3 segundos por vuelta, infinita */
+}

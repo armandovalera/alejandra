@@ -1,0 +1,217 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Información de motos Suzuki: modelos, rendimiento, tecnología y más.">
+  <meta name="keywords" content="Suzuki, motocicletas, motos Suzuki, motos deportivas, motos touring">
+  <meta name="author" content="Alejandra Diaz">
+
+  <title>Suzuki - Motocicletas y Tecnología</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0bd3ff;
+      color: #222;
+    }
+
+    /* NAV */
+    .nav {
+      background: #005bbb;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav__logo {
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .nav__list {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav__link {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .nav__link:hover {
+      opacity: 0.7;
+    }
+
+    /* HERO */
+    .hero {
+      background: url("https://tse2.mm.bing.net/th/id/OIP.focWd-Ki9J6tJrqWJTW0BwHaDs?rs=1&pid=ImgDetMain&o=7&rm=3") center/cover no-repeat;
+      height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 20px;
+    }
+
+    .hero__title {
+      font-size: 3rem;
+      color: white;
+      text-shadow: 2px 2px 8px black;
+    }
+
+    .hero__description {
+      font-size: 1.2rem;
+      color: #f8f8f8;
+      max-width: 700px;
+      margin: 15px auto;
+      text-shadow: 2px 2px 8px black;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background: #005bbb;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #003f7d;
+    }
+
+    /* INFO */
+    .info {
+      text-align: center;
+      padding: 50px 20px;
+      background: white;
+    }
+
+    .info__title {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #005bbb;
+    }
+
+    .info__text {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #005bbb;
+      text-align: center;
+      padding: 15px;
+      color: white;
+      margin-top: 50px;
+    }
+
+    /* NIEVE */
+    .snow-container {
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      color: white;
+      font-size: 1rem;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to { transform: translateY(100vh); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="main-header" style="position: relative;">
+    <nav class="nav">
+      <a href="susuki.html" class="nav__logo">MOTOS</a>
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">INICIO</a></li>
+        <li><a href="https://moto.suzuki.com.mx/" class="nav__link" target="_blank">Suzuki Oficial</a></li>
+      </ul>
+    </nav>
+
+    <div class="snow-container"></div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">MOTOS SUZUKI</h1>
+      <p class="hero__description">
+        Suzuki es una de las marcas japonesas más reconocidas por su ingeniería confiable, su equilibrio entre potencia y eficiencia, 
+        y sus motos diseñadas tanto para ciudad como para alto rendimiento. 
+        Desde la icónica GSX-R hasta los modelos V-Strom de aventura, Suzuki combina tecnología, fuerza y estilo.
+      </p>
+      <a href="https://www.motofichas.com.mx/marcas/suzuki" class="btn" target="_blank">Ver Modelos Suzuki</a>
+    </div>
+    <div class="snow-container"></div>
+  </section>
+
+  <section class="info">
+    <h2 class="info__title">Tecnología Suzuki</h2>
+    <p class="info__text">
+      Suzuki se destaca por su innovación constante y su compromiso con la calidad. 
+      Sus motores con tecnología SEP (Suzuki Eco Performance) mejoran el rendimiento reduciendo el consumo, 
+      mientras que sistemas como ABS, chasis livianos y electrónica avanzada garantizan una experiencia segura y poderosa.
+    </p>
+  </section>
+
+  <footer class="footer">
+    <p class="footer__text">© 2025 Suzuki Motos – Página informativa creada como proyecto final de Computación II.</p>
+  </footer>
+
+  <script>
+    function crearNieve() {
+      const contenedores = document.querySelectorAll(".snow-container");
+
+      contenedores.forEach(container => {
+        for (let i = 0; i < 25; i++) {
+          const snow = document.createElement("div");
+          snow.classList.add("snowflake");
+          snow.textContent = "❄";
+
+          snow.style.left = Math.random() * 100 + "vw";
+          snow.style.fontSize = (Math.random() * 12 + 10) + "px";
+          snow.style.animationDuration = (Math.random() * 4 + 3) + "s";
+          snow.style.opacity = Math.random();
+          
+          container.appendChild(snow);
+
+          setTimeout(() => snow.remove(), 8000);
+        }
+      });
+    }
+
+    setInterval(crearNieve, 1000);
+    crearNieve();
+  </script>
+
+</body>
+</html>
